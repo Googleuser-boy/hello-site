@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0); /* Starts 40px below final position */
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0); /* Ends at original position */
+    }
+}
+
+/* Class to apply the fadeInUp animation */
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Ensures elements are hidden before animation starts */
+}
+
+/* Scale In animation for the hero section content */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Starts slightly smaller */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Ends at original size */
+    }
+}
+
+/* Class to apply the scaleIn animation */
+.animate-scaleIn {
+    animation: scaleIn 0.8s ease-out forwards;
+    transform: scale(0.9);
+    opacity: 0; /* Ensures elements are hidden before animation starts */
+}
+
+/* Pulse Slow animation for background shapes in the banner */
+@keyframes pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.3;
+    }
+}
+
+/* Class to apply the pulse-slow animation */
+.animate-pulse-slow {
+    animation: pulse-slow 8s infinite ease-in-out; /* Slow, continuous pulse */
+}
+
+/* Hover Effect: Lift and Shadow */
+.hover-lift:hover {
+    transform: translateY(-5px); /* Lifts element slightly */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Adds shadow */
+}
+
+/* Specific transition for dark mode button */
+.dark-mode-button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode-button:hover {
+    transform: scale(1.05); /* Slightly scales up on hover */
+}
+
+.dark-mode-button:active {
+    transform: scale(0.95); /* Slightly scales down on click */
+}
+
+/* Hide elements with 'hidden' class by default, used for icon toggling */
+.hidden {
+    display: none;
+}
